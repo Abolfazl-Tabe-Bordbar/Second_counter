@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./main.css">
+    <title>Second counter</title>
+</head>
+<body class="bg-blue-500">
+    <section class="w-11/12 lg:w-4/12 h-72  mx-auto  mt-10 flex flex-col items-center justify-around box-border p-2 select-none">
+        <div class="w-full h-1/6  flex justify-around items-center">
+            <button type="button" id="get_second" class="w-2/12 h-full bg-green-400 bottom-0 select-none outline-none hover:bg-green-500 rounded-md text-white text-center">Start</button>
+            <input type="number" id="second_input" placeholder="Please Enter Your Seconds" class="w-9/12 h-full bottom-0 outline-none rounded-md text-center text-sm lg:text-base">
+        </div>
+        <div class="w-full h-3/6  flex flex-col justify-center items-center select-none mt-2">
+            <div id="circle" class="c100 p100">
+                <span id="show_second">0</span>
+                <div  class="slice ">
+                    <div class="bar"></div>
+                    <div  class="fill"></div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-1/6 flex justify-center items-center ">
+            <span id="running" class="text-lg font-bold text-orange-300 hidden">Counter Is Running...</span>
+            <span id="finished" class="text-lg font-bold text-green-300 hidden">Counter Is Finished &#9989;</span>
+            <span id="error" class="text-lg font-bold text-red-300 hidden">Your Seconds Not Invalid &#10060;</span>
+        </div>
+    </section>
+</body>
+<script src="./main.js"></script>
+</html>
