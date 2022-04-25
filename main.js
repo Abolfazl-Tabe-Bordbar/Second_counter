@@ -23,6 +23,7 @@ get_second.addEventListener("click", function () {
         setTimeout(function () {
             start_interval = setInterval(function () {
                 if (second > 0) {
+                    second_input.disabled = true;
                     second--;
                     var percent = Math.floor(((original_second - second) / original_second) * 100);
                     percent = 100 - percent;
@@ -34,6 +35,7 @@ get_second.addEventListener("click", function () {
                     }
                     circle.classList.add("p" + percent);
                     last_class = "p" + percent;
+                    
                 } else {
                     run_music.pause();
                     end_music.play();
@@ -43,6 +45,7 @@ get_second.addEventListener("click", function () {
                     error.style.display = "none";
                     finished.style.display = "block";
                     second_input.value = null;
+                    second_input.disabled = false;
                 }
             }, 1000);
         },500);
